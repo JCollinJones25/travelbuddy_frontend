@@ -18,7 +18,7 @@ const Data = (props) => {
 
     return (
         <>
-        <h3>data component</h3>
+        <h3>{props.URL}</h3>
         </>
     )
 }

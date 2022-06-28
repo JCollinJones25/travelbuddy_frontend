@@ -3,7 +3,7 @@ import Data from './components/Data';
 
 const App = () => {
 
-  const URL = process.env.REACT_APP_URL;
+  const URL = "https://pernappbackend.herokuapp.com/";
 
   return (
     <div className="App">
