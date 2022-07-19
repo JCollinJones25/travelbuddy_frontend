@@ -1,5 +1,8 @@
 import './App.css';
-import Data from './components/Data';
+import { Fragment } from "react"
+import Input from './components/Input';
+import Trips from './components/Trips';
+import Edit from './components/Edit';
 
 const App = () => {
 
@@ -7,8 +10,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <h3>react frontend</h3>
-      <Data URL={URL}/>
+      <Fragment>
+        <h3>react frontend</h3>
+        <Input />
+        <Trips URL={URL}/>
+        <Edit />
+      </Fragment>
     </div>
   );
 }

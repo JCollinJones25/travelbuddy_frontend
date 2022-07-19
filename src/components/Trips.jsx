@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const Data = (props) => {
+const Trips = (props) => {
 
     const [data, setData] = useState(null)
 
@@ -23,4 +23,4 @@ const Data = (props) => {
     )
 }
 
-export default Data
+export default Trips
