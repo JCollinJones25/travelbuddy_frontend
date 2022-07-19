@@ -29,7 +29,7 @@ const onSubmitForm = async e => {
         <Fragment>
             <div className="text-center mt-5">
                 <h1>Input</h1>
-                <form className="d-flex mt-5" onSubmit={onSubmitForm}>
+                <form className="p-5 mt-5" onSubmit={onSubmitForm}>
                     <input type="text" className="form-control" value={location} onChange={e => setLocation(e.target.value)}/>
                     <input type="text" className="form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
                     <input type="text" className="form-control" value={flights} onChange={e => setFlights(e.target.value)}/>
