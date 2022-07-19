@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <Fragment>
         <h3>react frontend</h3>
-        <Input />
+        <Input URL={URL}/>
         <Trips URL={URL}/>
         <Edit />
       </Fragment>
