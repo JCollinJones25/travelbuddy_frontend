@@ -6,13 +6,13 @@ import Edit from './components/Edit';
 
 const App = () => {
 
-  const URL = "https://pernappbackend.herokuapp.com/trips";
+  // const URL = "https://pernappbackend.herokuapp.com/trips";
 
   return (
     <div className="App">
       <Fragment>
-        <Input URL={URL}/>
-        <Trips URL={URL}/>
+        <Input />
+        <Trips />
         <Edit />
       </Fragment>
     </div>
