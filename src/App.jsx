@@ -11,7 +11,6 @@ const App = () => {
   return (
     <div className="App">
       <Fragment>
-        <h3>react frontend</h3>
         <Input URL={URL}/>
         <Trips URL={URL}/>
         <Edit />

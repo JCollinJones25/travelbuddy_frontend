@@ -28,16 +28,23 @@ const onSubmitForm = async e => {
     return (
         <Fragment>
             <div className="text-center mt-5">
-                <h1>Input</h1>
-                <form className="p-5 mt-5" onSubmit={onSubmitForm}>
+                <h3>Add a new upcoming trip</h3>
+                <form className="m-5" onSubmit={onSubmitForm}>
+                    <p>City, State</p>
                     <input type="text" className="form-control" value={location} onChange={e => setLocation(e.target.value)}/>
+                    <p>Hotel(s)</p>
                     <input type="text" className="form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
+                    <p>Flight(s)</p>
                     <input type="text" className="form-control" value={flights} onChange={e => setFlights(e.target.value)}/>
+                    <p>Days</p>
                     <input type="text" className="form-control" value={days} onChange={e => setDays(e.target.value)}/>
+                    <p>Nights</p>
                     <input type="text" className="form-control" value={nights} onChange={e => setNights(e.target.value)}/>
+                    <p>Activities</p>
                     <input type="text" className="form-control" value={activities} onChange={e => setActivities(e.target.value)}/>
+                    <p>Reservations</p>
                     <input type="text" className="form-control" value={reservations} onChange={e => setReservations(e.target.value)}/>
-                    <button className="btn btn-sucess">Add</button>
+                    <button className="btn btn-sucess m-3">Add</button>
                 </form>
         </div>
         </Fragment>
