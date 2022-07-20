@@ -6,7 +6,7 @@ import Edit from './components/Edit';
 
 const App = () => {
 
-  const URL = "https://pernappbackend.herokuapp.com/";
+  const URL = "https://pernappbackend.herokuapp.com/trips";
 
   return (
     <div className="App">
