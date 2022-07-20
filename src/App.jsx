@@ -1,5 +1,4 @@
 import './App.css';
-import { Fragment } from "react"
 import Input from './components/Input';
 import Trips from './components/Trips';
 import Edit from './components/Edit';
@@ -10,11 +9,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Fragment>
-        <Input />
-        <Trips />
-        <Edit />
-      </Fragment>
+      <Input />
+      <Trips />
+      <Edit />
     </div>
   );
 }
