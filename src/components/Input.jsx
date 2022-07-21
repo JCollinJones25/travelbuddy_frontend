@@ -40,13 +40,20 @@ const handleSubmit = async (e) => {
 const handleChange = (e) => {
     e.preventDefault()
     const value = e.target.value
-    setTrip({location: value})
-    setTrip({hotel: value})
-    setTrip({flights: value})
-    setTrip({days: value})
-    setTrip({nights: value})
-    setTrip({activities: value})
-    setTrip({reservations: value})
+    setTrip({
+        ...trip,
+        location: value,
+        hotel: value,
+        flights: value,
+        days: value,
+        nights: value,
+        activities: value,
+        reservations: value
+    })
+    // setTrip({
+    //     ...trip,
+    //     [e.target.name]: value
+    //   });
 }
 
     return (
