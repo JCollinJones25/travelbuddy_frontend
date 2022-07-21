@@ -16,19 +16,22 @@ const URL = "http://localhost:4000/trips/new"
 
 const handleSubmit = async (e) => {
     e.preventDefault()   
-    // fetch(URL)
-    // .then(response => response.json())
-    // .then(result => {
-    //   console.log(result)
-    // })
-        try {
-        const body = { trip }
-        const response = await fetch(URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body)
-        })
-        console.log(response)
+    try {
+    const body = { 
+        location: trip.location,
+        hotel: trip.location,
+        flights: trip.location,
+        days: trip.days,
+        nights: trip.nights,
+        activities: trip.activities,
+        reservations: trip.reservations
+     }
+    const response = await fetch(URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+    })
+    console.log(response)
     } catch (err) {
         console.error(err.message)
     }
@@ -37,9 +40,13 @@ const handleSubmit = async (e) => {
 const handleChange = (e) => {
     e.preventDefault()
     const value = e.target.value
-    setTrip({
-        [e.target.name]: value
-    })
+    setTrip({location: value})
+    setTrip({hotel: value})
+    setTrip({flights: value})
+    setTrip({days: value})
+    setTrip({nights: value})
+    setTrip({activities: value})
+    setTrip({reservations: value})
 }
 
     return (
