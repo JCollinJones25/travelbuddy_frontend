@@ -19,8 +19,8 @@ const handleSubmit = async (e) => {
     try {
     const body = { 
         location: trip.location,
-        hotel: trip.location,
-        flights: trip.location,
+        hotel: trip.hotel,
+        flights: trip.flights,
         days: trip.days,
         nights: trip.nights,
         activities: trip.activities,
