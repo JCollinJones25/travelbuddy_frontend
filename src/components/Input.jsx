@@ -39,17 +39,22 @@ const handleSubmit = async (e) => {
 
 const handleChange = (e) => {
     e.preventDefault()
-    const value = e.target.value
+    const { name, value } = e.target
     setTrip({
         ...trip,
-        location: value,
-        hotel: value,
-        flights: value,
-        days: value,
-        nights: value,
-        activities: value,
-        reservations: value
+        [name]: value,
     })
+    // const value = e.target.value
+    // setTrip({
+    //     ...trip,
+    //     location: value,
+    //     hotel: value,
+    //     flights: value,
+    //     days: value,
+    //     nights: value,
+    //     activities: value,
+    //     reservations: value
+    // })
     // setTrip({
     //     ...trip,
     //     [e.target.name]: value
@@ -62,19 +67,19 @@ const handleChange = (e) => {
             <h3>Add an upcoming trip</h3>
             <form className="m-5" onSubmit={handleSubmit}>
                 <p>City, State</p>
-                <input type="text" className="form-control mb-3" value={trip.location} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.location} name="location" onChange={handleChange}/>
                 <p>Hotel(s)</p>
-                <input type="text" className="form-control mb-3" value={trip.hotel} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.hotel} name="hotel" onChange={handleChange}/>
                 <p>Flight(s)</p>
-                <input type="text" className="form-control mb-3" value={trip.flights} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.flights} name="flights" onChange={handleChange}/>
                 <p>Days</p>
-                <input type="text" className="form-control mb-3" value={trip.days} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.days} name="days" onChange={handleChange}/>
                 <p>Nights</p>
-                <input type="text" className="form-control mb-3" value={trip.nights} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.nights} name="nights" onChange={handleChange}/>
                 <p>Activities</p>
-                <input type="text" className="form-control mb-3" value={trip.activities} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.activities} name="activities" onChange={handleChange}/>
                 <p>Reservations</p>
-                <input type="text" className="form-control mb-3" value={trip.reservations} onChange={handleChange}/>
+                <input type="text" className="form-control mb-3" value={trip.reservations} name="reservations" onChange={handleChange}/>
                 <button className="btn btn-sucess">Add</button>
                 </form>
         </div>
