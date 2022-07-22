@@ -4,8 +4,10 @@ const Trips = (props) => {
 
     const [data, setData] = useState(null)
 
+    const URL = "http://localhost:4000/trips"
+
     const getData = async () => {
-        const response = await fetch(props.URL)
+        const response = await fetch(URL)
         const Data = await response.json()
         setData(Data)
     }
@@ -14,12 +16,21 @@ const Trips = (props) => {
         getData()
     }, [])
 
-    console.log(props.URL)
 
     return (
-        <>
-        <h3>{props.URL}</h3>
-        </>
+        <div className="trips">
+        <h3>Trips</h3>
+        {" "}
+        <table className="table text-center">
+            <thread>
+                <tr>
+                    <th>Trip</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thread>
+        </table>
+        </div>
     )
 }
 
