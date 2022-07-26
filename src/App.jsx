@@ -1,7 +1,6 @@
 import './App.css';
 import Input from './components/Input';
 import Trips from './components/Trips';
-import Edit from './components/Edit';
 
 const App = () => {
 
@@ -11,7 +10,6 @@ const App = () => {
     <div className="App">
       <Trips />
       <Input />
-      <Edit />
     </div>
   );
 }

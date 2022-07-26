@@ -66,7 +66,7 @@ const handleChange = (e) => {
                 <input type="text" className="form-control mb-3" value={trip.activities} name="activities" onChange={handleChange}/>
                 <p>Reservations</p>
                 <input type="text" className="form-control mb-3" value={trip.reservations} name="reservations" onChange={handleChange}/>
-                <button className="btn btn-sucess">Add</button>
+                <button className="btn btn-success">Add</button>
                 </form>
         </div>
     )

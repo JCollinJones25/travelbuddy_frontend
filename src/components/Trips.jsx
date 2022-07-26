@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Edit from "./Edit"
 
 const Trips = (props) => {
 
@@ -46,7 +47,7 @@ const Trips = (props) => {
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
-                        <button className="btn btn-success m-1">Edit</button>
+                        <td><Edit /></td>
                         <button className="btn btn-danger" onClick={() => deleteTrip(trip.id)}>Delete</button>
                     </tr>
                 ))}
