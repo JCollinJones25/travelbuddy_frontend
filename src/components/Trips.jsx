@@ -47,7 +47,7 @@ const Trips = (props) => {
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
-                        <td><Edit /></td>
+                        <td><Edit trip={trips}/></td>
                         <button className="btn btn-danger" onClick={() => deleteTrip(trip.id)}>Delete</button>
                     </tr>
                 ))}

@@ -1,33 +1,42 @@
-const Edit = () => {
+
+const Edit = (props) => {
+
+    console.log(props.trip)
+
   return (
     <div className="edit">
-      {/* <!-- Button to Open the Modal --> */}
+      
       <button
         type="button"
         class="btn btn-primary"
         data-toggle="modal"
-        data-target="#myModal"
-      >
-        Edit
-      </button>
+        data-target="#myModal">Edit</button>
 
-      {/* <!-- The Modal --> */}
       <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
-            {/* <!-- Modal Header --> */}
+           
             <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
+              <h4 class="modal-title">Edit {props.trip.location}</h4>
               <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
             </div>
 
-            {/* <!-- Modal body --> */}
-            <div class="modal-body">Modal body..</div>
+            <div class="modal-body">
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+                <input type="text" className="form-control" />
+            </div>
 
-            {/* <!-- Modal footer --> */}
             <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">
+                Edit
+              </button>
               <button type="button" class="btn btn-danger" data-dismiss="modal">
                 Close
               </button>
