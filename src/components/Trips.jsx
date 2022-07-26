@@ -35,8 +35,8 @@ const Trips = (props) => {
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <button className="btn btn-success m-1">Edit</button>
+                        <button className="btn btn-danger">Delete</button>
                     </tr>
                 ))}
             </tbody>

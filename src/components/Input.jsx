@@ -45,21 +45,6 @@ const handleChange = (e) => {
         ...trip,
         [name]: value,
     })
-    // const value = e.target.value
-    // setTrip({
-    //     ...trip,
-    //     location: value,
-    //     hotel: value,
-    //     flights: value,
-    //     days: value,
-    //     nights: value,
-    //     activities: value,
-    //     reservations: value
-    // })
-    // setTrip({
-    //     ...trip,
-    //     [e.target.name]: value
-    //   });
 }
 
     return (
