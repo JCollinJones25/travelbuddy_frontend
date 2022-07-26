@@ -22,6 +22,17 @@ const Trips = (props) => {
 
     console.log(trips)
 
+    const deleteTrip = async (id) => {
+        try {
+            const deleteTrip = await fetch(`${URL}/${id}`, {
+                method: "DELETE"
+            })
+            setTrips(trips.filter(trip => trip.id !== id))
+        } catch (err) {
+            console.error(err.message)
+        }
+    }
+
     return (
         <div className="trips">
         <h3>Trips</h3>
@@ -29,14 +40,14 @@ const Trips = (props) => {
         <table className="table text-center">
             <tbody>
                 {trips.map(trip => (
-                    <tr>
+                    <tr key={trip.id}>
                         <td>{trip.location}</td>
                         <td>{trip.hotel}</td>
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
                         <button className="btn btn-success m-1">Edit</button>
-                        <button className="btn btn-danger">Delete</button>
+                        <button className="btn btn-danger" onClick={() => deleteTrip(trip.id)}>Delete</button>
                     </tr>
                 ))}
             </tbody>
