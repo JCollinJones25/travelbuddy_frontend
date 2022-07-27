@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Edit from "./Edit"
 
-const Trips = (props) => {
+const Trips = () => {
 
     const [trips, setTrips] = useState([])
 
