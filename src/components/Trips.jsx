@@ -34,7 +34,7 @@ const Trips = () => {
 
     return (
         <div className="trips">
-        <h3>Upcoming Trips</h3>
+        <h5>Upcoming Trips</h5>
         {" "}
         <table className="table">
             <tr>

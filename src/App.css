@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.header {
+  background-color: rgb(247, 169, 92);
+  color: white;
+  padding: 20px;
+  padding-left: 30px;
+  font-size: 25px;
+  text-align: left;
+}
+
 .trips {
   margin-top: 30px;
 }

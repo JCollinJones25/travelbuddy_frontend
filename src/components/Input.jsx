@@ -50,7 +50,7 @@ const handleChange = (e) => {
     return (
        
         <div className="add">
-            <h3>Add an upcoming trip</h3>
+            <h5>Add an upcoming trip</h5>
             <hr></hr>
             <form onSubmit={handleSubmit}>
                 <div className="form">
