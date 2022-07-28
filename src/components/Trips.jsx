@@ -39,6 +39,15 @@ const Trips = () => {
         <h3>Trips</h3>
         {" "}
         <table className="table text-center">
+            <tr>
+                <th>Where?</th>
+                <th>Hotel</th>
+                <th>Flights</th>
+                <th>Days</th>
+                <th>Nights</th>
+                <th>Plans</th>
+                <th>Reservations</th>
+            </tr>
             <tbody>
                 {trips.map(trip => (
                     <tr key={trip.id}>
@@ -47,6 +56,8 @@ const Trips = () => {
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
+                        <td>{trip.activities}</td>
+                        <td>{trip.reservations}</td>
                         <td><Edit trip={trip} URL={URL}/></td>
                         <button className="btn btn-danger m-3" onClick={() => deleteTrip(trip.id)}>Delete</button>
                     </tr>
