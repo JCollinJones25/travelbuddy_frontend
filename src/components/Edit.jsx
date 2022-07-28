@@ -18,15 +18,7 @@ const Edit = ({ trip, URL }) => {
     const updateTrip = async (e) => {
         e.preventDefault()
         try {
-            const body = { 
-                location: trip.location,
-                hotel: trip.hotel,
-                flights: trip.flights,
-                days: trip.days,
-                nights: trip.nights,
-                activities: trip.activities,
-                reservations: trip.reservations
-             }
+            const body = { location, hotel, flights, days, nights, activities, reservations }
              const response = await fetch(`${URL}/${trip.id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
