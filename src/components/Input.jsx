@@ -49,24 +49,32 @@ const handleChange = (e) => {
 
     return (
        
-        <div className="text-center mt-5">
+        <div className="add">
             <h3>Add an upcoming trip</h3>
-            <form className="m-5" onSubmit={handleSubmit}>
-                <p>City, State</p>
-                <input type="text" className="form-control mb-3" value={trip.location} name="location" onChange={handleChange}/>
-                <p>Hotel(s)</p>
-                <input type="text" className="form-control mb-3" value={trip.hotel} name="hotel" onChange={handleChange}/>
-                <p>Flight(s)</p>
-                <input type="text" className="form-control mb-3" value={trip.flights} name="flights" onChange={handleChange}/>
-                <p>Days</p>
-                <input type="text" className="form-control mb-3" value={trip.days} name="days" onChange={handleChange}/>
-                <p>Nights</p>
-                <input type="text" className="form-control mb-3" value={trip.nights} name="nights" onChange={handleChange}/>
-                <p>Activities</p>
-                <input type="text" className="form-control mb-3" value={trip.activities} name="activities" onChange={handleChange}/>
-                <p>Reservations</p>
-                <input type="text" className="form-control mb-3" value={trip.reservations} name="reservations" onChange={handleChange}/>
-                <button className="btn btn-success">Add</button>
+            <hr></hr>
+            <form onSubmit={handleSubmit}>
+                <div className="form">
+
+                <div className="first-half">
+                    <p>City, State</p>
+                    <input type="text" className="input form-control" value={trip.location} name="location" onChange={handleChange}/>
+                    <p>Hotel(s)</p>
+                    <input type="text" className="input form-control" value={trip.hotel} name="hotel" onChange={handleChange}/>
+                    <p>Flight(s)</p>
+                    <input type="text" className="input form-control" value={trip.flights} name="flights" onChange={handleChange}/>
+                </div>
+                <div className="second-half">
+                    <p>Days (num)</p>
+                    <input type="text" className="input form-control" value={trip.days} name="days" onChange={handleChange}/>
+                    <p>Nights (num)</p>
+                    <input type="text" className="input form-control" value={trip.nights} name="nights" onChange={handleChange}/>
+                    <p>Activities</p>
+                    <input type="text" className="input form-control" value={trip.activities} name="activities" onChange={handleChange}/>
+                    <p>Reservations</p>
+                    <input type="text" className="input form-control" value={trip.reservations} name="reservations" onChange={handleChange}/>
+                </div>
+                </div>
+                <button className="btn btn-success" id="add-btn">Add</button>
                 </form>
         </div>
     )

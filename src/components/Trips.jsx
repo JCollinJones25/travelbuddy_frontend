@@ -21,8 +21,6 @@ const Trips = () => {
         getTrips()
     }, [])
 
-    console.log(trips)
-
     const deleteTrip = async (id) => {
         try {
             const deleteTrip = await fetch(`${URL}/${id}`, {
@@ -36,9 +34,9 @@ const Trips = () => {
 
     return (
         <div className="trips">
-        <h3>Trips</h3>
+        <h3>Upcoming Trips</h3>
         {" "}
-        <table className="table text-center">
+        <table className="table">
             <tr>
                 <th>Where?</th>
                 <th>Hotel</th>
@@ -59,7 +57,9 @@ const Trips = () => {
                         <td>{trip.activities}</td>
                         <td>{trip.reservations}</td>
                         <td><Edit trip={trip} URL={URL}/></td>
-                        <button className="btn btn-danger m-3" onClick={() => deleteTrip(trip.id)}>Delete</button>
+                        <td>
+                            <button className="btn btn-danger" onClick={() => deleteTrip(trip.id)}>Delete</button>
+                        </td>
                     </tr>
                 ))}
             </tbody>
