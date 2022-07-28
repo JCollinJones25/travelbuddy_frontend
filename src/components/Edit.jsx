@@ -19,13 +19,13 @@ const Edit = ({ trip, URL }) => {
         e.preventDefault()
         try {
             const body = { 
-                location,
-                hotel,
-                flights,
-                days,
-                nights,
-                activities,
-                reservations
+                location: trip.location,
+                hotel: trip.hotel,
+                flights: trip.flights,
+                days: trip.days,
+                nights: trip.nights,
+                activities: trip.activities,
+                reservations: trip.reservations
              }
              const response = await fetch(`${URL}/${trip.id}`, {
                 method: "PUT",
@@ -33,6 +33,7 @@ const Edit = ({ trip, URL }) => {
                 body: JSON.stringify(body)
             })
             console.log(response)
+            console.log(trip.id)
             window.location = "/"
         } catch (err) {
             console.error(err.message)
@@ -51,14 +52,14 @@ const Edit = ({ trip, URL }) => {
 
       <div className="modal" id={`${trip.id}`}
       onClick={() => {
-        setLocation(trip.location)
-        setHotel(trip.hotel)
-        setFlights(trip.flights)
-        setDays(trip.days)
-        setNights(trip.nights)
-        setActivities(trip.activities)
-        setReservations(trip.reservations)
-        }}>
+        setLocation(location)
+        setHotel(hotel)
+        setFlights(flights)
+        setDays(days)
+        setNights(nights)
+        setActivities(activities)
+        setReservations(reservations)
+      }}>
         <div className="modal-dialog">
           <div className="modal-content">
            
@@ -66,14 +67,14 @@ const Edit = ({ trip, URL }) => {
               <h4 className="modal-title">Edit Trip</h4>
               <button type="button" className="close" data-dismiss="modal"
               onClick={() => {
-                setLocation(trip.location)
-                setHotel(trip.hotel)
-                setFlights(trip.flights)
-                setDays(trip.days)
-                setNights(trip.nights)
-                setActivities(trip.activities)
-                setReservations(trip.reservations)
-                }}>
+                setLocation(location)
+                setHotel(hotel)
+                setFlights(flights)
+                setDays(days)
+                setNights(nights)
+                setActivities(activities)
+                setReservations(reservations)
+              }}>
                 &times;
               </button>
             </div>
@@ -94,14 +95,14 @@ const Edit = ({ trip, URL }) => {
               </button>
               <button type="button" className="btn btn-danger" data-dismiss="modal" 
               onClick={() => {
-                setLocation(trip.location)
-                setHotel(trip.hotel)
-                setFlights(trip.flights)
-                setDays(trip.days)
-                setNights(trip.nights)
-                setActivities(trip.activities)
-                setReservations(trip.reservations)
-                }}>
+                setLocation(location)
+                setHotel(hotel)
+                setFlights(flights)
+                setDays(days)
+                setNights(nights)
+                setActivities(activities)
+                setReservations(reservations)
+              }}>
                 Close
               </button>
             </div>
