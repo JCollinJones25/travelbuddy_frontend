@@ -47,8 +47,8 @@ const Trips = () => {
                         <td>{trip.flights}</td>
                         <td>{trip.days}</td>
                         <td>{trip.nights}</td>
-                        <td><Edit trip={trips}/></td>
-                        <button className="btn btn-danger" onClick={() => deleteTrip(trip.id)}>Delete</button>
+                        <td><Edit trip={trips} URL={URL}/></td>
+                        <button className="btn btn-danger m-3" onClick={() => deleteTrip(trip.id)}>Delete</button>
                     </tr>
                 ))}
             </tbody>
