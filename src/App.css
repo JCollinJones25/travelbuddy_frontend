@@ -1,14 +1,28 @@
+:root {
+  --orange: #f78d5c;
+}
+
+
 .App {
   text-align: center;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f1f1f1;
+}
+
 .header {
-  background-color: rgb(247, 141, 92);
+  background-color: var(--orange);
   color: white;
   padding: 20px;
   padding-left: 30px;
   font-size: 25px;
   text-align: left;
+  width: 100%;
 }
 
 .trips {
@@ -18,13 +32,14 @@
 .table {
   width: 80%;
   margin: auto;
+  background-color: white;
   margin-top: 15px;
   font-size: 15px;
 }
 
 .add {
   margin-top: 25px;
-  margin-bottom: 25px;
+  padding-bottom: 75px;
   text-align: center;
 }
 
@@ -33,21 +48,26 @@ hr {
 }
 
 .form {
-  margin-top: 25px;
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: white;
 }
 
-.input {
-  margin: 15px;
-  width: 90%;
+.form .input {
+  width: 300px;
+  margin: 10px;
 }
 
 #add-btn {
   margin-top: 15px;
+}
+
+.modal-header {
+  background-color: var(--orange);
+  color: white;
 }
 
 .modal-body {
@@ -56,4 +76,9 @@ hr {
 
 .modal-body .input {
   width: 90%;
+}
+
+p {
+  margin-bottom: 3px;
+  margin-top: 5px;
 }

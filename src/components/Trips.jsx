@@ -35,6 +35,7 @@ const Trips = () => {
     return (
         <div className="trips">
         <h5>Upcoming Trips</h5>
+        <hr></hr>
         {" "}
         <table className="table">
             <tr>

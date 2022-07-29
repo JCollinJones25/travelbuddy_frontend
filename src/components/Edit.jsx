@@ -28,13 +28,11 @@ const Edit = ({ trip, URL }) => {
 
   return (
     <div className="edit">
-      
       <button
         type="button"
         className="btn btn-primary"
         data-toggle="modal"
         data-target={`#${trip.id}`}>Edit</button>
-
       <div className="modal" id={`${trip.id}`}
       onClick={() => {
         setLocation(trip.location)
@@ -47,7 +45,6 @@ const Edit = ({ trip, URL }) => {
       }}>
         <div className="modal-dialog">
           <div className="modal-content">
-           
             <div className="modal-header">
               <h4 className="modal-title">Edit Trip</h4>
               <button type="button" className="close" data-dismiss="modal"
@@ -63,7 +60,6 @@ const Edit = ({ trip, URL }) => {
                 &times;
               </button>
             </div>
-
             <div className="modal-body">
                 <p>City, State</p>
                 <input type="text" className="input form-control" value={location} onChange={e => setLocation(e.target.value)}/>
@@ -80,7 +76,6 @@ const Edit = ({ trip, URL }) => {
                 <p>Reservations</p>
                 <input type="text" className="input form-control" value={reservations} onChange={e => setReservations(e.target.value)}/>
             </div>
-
             <div className="modal-footer">
               <button type="button" className="btn btn-success" data-dismiss="modal" onClick={ updateTrip }>
                 Edit
