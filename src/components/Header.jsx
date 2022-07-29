@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <div className="header">
-            Travel Planner
+            Travel Buddy
         </div>
     )
 }

@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-color: rgb(247, 169, 92);
+  background-color: rgb(247, 141, 92);
   color: white;
   padding: 20px;
   padding-left: 30px;
@@ -48,4 +48,12 @@ hr {
 
 #add-btn {
   margin-top: 15px;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+.modal-body .input {
+  width: 90%;
 }

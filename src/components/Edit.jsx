@@ -64,17 +64,24 @@ const Edit = ({ trip, URL }) => {
               </button>
             </div>
 
-            <div class="modal-body">
-                <input type="text" className="form-control" value={location} onChange={e => setLocation(e.target.value)}/>
-                <input type="text" className="form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
-                <input type="text" className="form-control" value={flights} onChange={e => setFlights(e.target.value)}/>
-                <input type="text" className="form-control" value={days} onChange={e => setDays(e.target.value)}/>
-                <input type="text" className="form-control" value={nights} onChange={e => setNights(e.target.value)}/>
-                <input type="text" className="form-control" value={activities} onChange={e => setActivities(e.target.value)}/>
-                <input type="text" className="form-control" value={reservations} onChange={e => setReservations(e.target.value)}/>
+            <div className="modal-body">
+                <p>City, State</p>
+                <input type="text" className="input form-control" value={location} onChange={e => setLocation(e.target.value)}/>
+                <p>Hotel(s)</p>
+                <input type="text" className="input form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
+                <p>Flight(s)</p>
+                <input type="text" className="input form-control" value={flights} onChange={e => setFlights(e.target.value)}/>
+                <p>Days (num)</p>
+                <input type="text" className="input form-control" value={days} onChange={e => setDays(e.target.value)}/>
+                <p>Nights (num)</p>
+                <input type="text" className="input form-control" value={nights} onChange={e => setNights(e.target.value)}/>
+                <p>Activities</p>
+                <input type="text" className="input form-control" value={activities} onChange={e => setActivities(e.target.value)}/>
+                <p>Reservations</p>
+                <input type="text" className="input form-control" value={reservations} onChange={e => setReservations(e.target.value)}/>
             </div>
 
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button type="button" className="btn btn-success" data-dismiss="modal" onClick={ updateTrip }>
                 Edit
               </button>
