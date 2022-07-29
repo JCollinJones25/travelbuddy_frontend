@@ -1,28 +1,30 @@
+
 :root {
   --orange: #f78d5c;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 .App {
   text-align: center;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  margin-right: 0px;
+  padding: 0;
   background-color: #f1f1f1;
 }
 
 .header {
   background-color: var(--orange);
   color: white;
-  padding: 20px;
+  padding: 15px;
   padding-left: 30px;
-  font-size: 25px;
+  font-size: 20px;
   text-align: left;
-  width: 100%;
+  width: 100vw;
+  margin: 0%;
 }
 
 .trips {
@@ -35,6 +37,10 @@ html, body {
   background-color: white;
   margin-top: 15px;
   font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #dcebfd;
 }
 
 .add {
@@ -81,4 +87,49 @@ hr {
 p {
   margin-bottom: 3px;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 835px) {
+
+  .table {
+    width: 80%;
+    font-size: 10px;
+    
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 30px;
+    width: 35px;
+    font-size: 10px;
+  }
+  
+  tr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    padding-left: 15px;
+    font-size: 15px;
+  }
+
+  .add {
+    text-align: center;
+  }
+
+  .form {
+    font-size: 10px;
+    flex-direction: column;
+  }
+  
+  .form .input {
+    width: 90%;
+    margin: 10px;
+    font-size: 10px;
+  }
+
 }
