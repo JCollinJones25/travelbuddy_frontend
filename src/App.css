@@ -22,7 +22,7 @@ html, body {
   color: white;
   padding: 15px;
   padding-left: 30px;
-  font-size: 20px;
+  font-size: 23px;
   text-align: left;
   width: 100vw;
   margin: 0%;
@@ -93,8 +93,8 @@ p {
 @media screen and (max-width: 835px) {
 
   .table {
-    width: 80%;
-    font-size: 10px;
+    width: 90%;
+    font-size: 15px;
   }
 
   tbody {
@@ -130,7 +130,6 @@ p {
 
   .header {
     padding-left: 15px;
-    font-size: 15px;
   }
 
   .add {
@@ -138,14 +137,14 @@ p {
   }
 
   .form {
-    font-size: 10px;
+    font-size: 15px;
     flex-direction: column;
   }
   
   .form .input {
     width: 90%;
     margin: 10px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
 }
