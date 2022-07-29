@@ -38,6 +38,7 @@ const Trips = () => {
         <table className="table">
           <tr>
             <th>Where?</th>
+            <th>Date(s)</th>
             <th>Hotel</th>
             <th>Flights</th>
             <th>Days</th>
@@ -49,6 +50,7 @@ const Trips = () => {
             {trips.map((trip) => (
                 <tr key={trip.id}>
                 <td>{trip.location}</td>
+                <td>{trip.date}</td>
                 <td>{trip.hotel}</td>
                 <td>{trip.flights}</td>
                 <td>{trip.days}</td>

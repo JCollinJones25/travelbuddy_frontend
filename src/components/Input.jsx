@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const Input = (props) => {
+const Input = () => {
   const [trip, setTrip] = useState({
     location: "",
+    date: "",
     hotel: "",
     flights: "",
     days: "",
@@ -18,6 +19,7 @@ const Input = (props) => {
     try {
       const body = {
         location: trip.location,
+        date: trip.date,
         hotel: trip.hotel,
         flights: trip.flights,
         days: trip.days,
@@ -58,6 +60,14 @@ const Input = (props) => {
               type="text"
               className="input form-control"
               value={trip.location}
+              name="location"
+              onChange={handleChange}
+            />
+            <p>Date</p>
+            <input
+              type="text"
+              className="input form-control"
+              value={trip.date}
               name="location"
               onChange={handleChange}
             />

@@ -4,6 +4,7 @@ import { useState } from "react"
 const Edit = ({ trip, URL }) => {
 
     const [location, setLocation] = useState(trip.location)
+    const [date, setDate] = useState(trip.date)
     const [hotel, setHotel] = useState(trip.hotel)
     const [flights, setFlights] = useState(trip.flights)
     const [days, setDays] = useState(trip.days)
@@ -14,7 +15,7 @@ const Edit = ({ trip, URL }) => {
     const updateTrip = async (e) => {
         e.preventDefault()
         try {
-            const body = { location, hotel, flights, days, nights, activities, reservations }
+            const body = { location, date, hotel, flights, days, nights, activities, reservations }
              const response = await fetch(`${URL}/${trip.id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -36,6 +37,7 @@ const Edit = ({ trip, URL }) => {
       <div className="modal" id={`${trip.id}`}
       onClick={() => {
         setLocation(trip.location)
+        setDate(trip.date)
         setHotel(trip.hotel)
         setFlights(trip.flights)
         setDays(trip.days)
@@ -50,6 +52,7 @@ const Edit = ({ trip, URL }) => {
               <button type="button" className="close" data-dismiss="modal"
               onClick={() => {
                 setLocation(trip.location)
+                setDate(trip.date)
                 setHotel(trip.hotel)
                 setFlights(trip.flights)
                 setDays(trip.days)
@@ -63,6 +66,8 @@ const Edit = ({ trip, URL }) => {
             <div className="modal-body">
                 <p>City, State</p>
                 <input type="text" className="input form-control" value={location} onChange={e => setLocation(e.target.value)}/>
+                <p>Date(s)</p>
+                <input type="text" className="input form-control" value={date} onChange={e => setDate(e.target.value)}/>
                 <p>Hotel(s)</p>
                 <input type="text" className="input form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
                 <p>Flight(s)</p>
@@ -83,6 +88,7 @@ const Edit = ({ trip, URL }) => {
               <button type="button" className="btn btn-danger" data-dismiss="modal" 
               onClick={() => {
                 setLocation(trip.location)
+                setDate(trip.date)
                 setHotel(trip.hotel)
                 setFlights(trip.flights)
                 setDays(trip.days)
