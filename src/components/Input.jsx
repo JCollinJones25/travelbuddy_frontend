@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Input = (props) => {
+
   const [trip, setTrip] = useState({
     location: "",
     date: "",
