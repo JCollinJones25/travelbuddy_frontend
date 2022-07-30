@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
-const Trips = () => {
+const Trips = (props) => {
   const [trips, setTrips] = useState([]);
 
-  const URL = "http://localhost:4000/trips";
 
   const getTrips = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(props.URL);
       const result = await response.json();
       setTrips(result);
     } catch (err) {
@@ -22,7 +21,7 @@ const Trips = () => {
 
   const deleteTrip = async (id) => {
     try {
-      const deleteTrip = await fetch(`${URL}/${id}`, {
+      const deleteTrip = await fetch(`${props.URL}/${id}`, {
         method: "DELETE",
       });
       setTrips(trips.filter((trip) => trip.id !== id));
@@ -59,7 +58,7 @@ const Trips = () => {
                 <td>{trip.reservations}</td>
                 <div className="edit-delete-buttons">
                   <td>
-                    <Edit trip={trip} URL={URL} />
+                    <Edit trip={trip} URL={props.URL} />
                   </td>
                   <td>
                     <button

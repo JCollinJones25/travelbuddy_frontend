@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Input = () => {
+const Input = (props) => {
   const [trip, setTrip] = useState({
     location: "",
     date: "",
@@ -12,7 +12,7 @@ const Input = () => {
     reservations: "",
   });
 
-  const URL = "http://localhost:4000/trips/new";
+  // const URL = "http://localhost:4000/trips/new";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const Input = () => {
         activities: trip.activities,
         reservations: trip.reservations,
       };
-      const response = await fetch(URL, {
+      const response = await fetch(props.URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

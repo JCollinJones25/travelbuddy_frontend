@@ -5,13 +5,13 @@ import Trips from './components/Trips';
 
 const App = () => {
 
-  // const URL = "https://pernappbackend.herokuapp.com/trips";
+  const URL = "https://travelbuddy-planner.herokuapp.com/";
 
   return (
     <div className="App">
       <Header />
-      <Trips />
-      <Input />
+      <Trips URL={URL}/>
+      <Input URL={URL}/>
     </div>
   );
 }
