@@ -68,7 +68,7 @@ const Input = () => {
               type="text"
               className="input form-control"
               value={trip.date}
-              name="location"
+              name="date"
               onChange={handleChange}
             />
             <p>Hotel(s)</p>
