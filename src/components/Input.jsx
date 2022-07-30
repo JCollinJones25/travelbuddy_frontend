@@ -12,7 +12,7 @@ const Input = (props) => {
     reservations: "",
   });
 
-  // const URL = "http://localhost:4000/trips/new";
+  // const URL = "http://localhost:4000/new";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ const Input = (props) => {
         activities: trip.activities,
         reservations: trip.reservations,
       };
-      const response = await fetch(props.URL, {
+      const response = await fetch(`${props.URL}/new`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
