@@ -14,4 +14,4 @@ Built using the PERN stack, Travel Buddy is a full stack website to plan and org
 - As a user, I want to have the ability to delete trips 
 
 ## Component Hierarchy
-![comp hierarchy]()
+![comp hierarchy](https://github.com/JCollinJones25/travelbuddy-frontend/blob/main/public/images/comps.png)
