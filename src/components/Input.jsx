@@ -89,7 +89,7 @@ const Input = () => {
             />
           </div>
           <div className="second-half">
-            <p>Days (num)</p>
+            <p>Days</p>
             <input
               type="text"
               className="input form-control"
@@ -97,7 +97,7 @@ const Input = () => {
               name="days"
               onChange={handleChange}
             />
-            <p>Nights (num)</p>
+            <p>Nights</p>
             <input
               type="text"
               className="input form-control"

@@ -90,7 +90,7 @@ p {
   margin-top: 5px;
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 875px) {
 
   .table {
     width: 90%;
@@ -110,15 +110,15 @@ p {
     text-align: center;
     box-sizing: border-box;
     flex-basis: 50%;
-    margin: 0 100%;
+    margin: 10px 100%;
+    height: 30px;
+    width: 35px;
   }
   
   .btn {
     display: flex;
     justify-content: center;
     margin: auto;
-    height: 30px;
-    width: 35px;
     font-size: 10px;
   }
   

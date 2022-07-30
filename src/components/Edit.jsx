@@ -72,9 +72,9 @@ const Edit = ({ trip, URL }) => {
                 <input type="text" className="input form-control" value={hotel} onChange={e => setHotel(e.target.value)}/>
                 <p>Flight(s)</p>
                 <input type="text" className="input form-control" value={flights} onChange={e => setFlights(e.target.value)}/>
-                <p>Days (num)</p>
+                <p>Days</p>
                 <input type="text" className="input form-control" value={days} onChange={e => setDays(e.target.value)}/>
-                <p>Nights (num)</p>
+                <p>Nights</p>
                 <input type="text" className="input form-control" value={nights} onChange={e => setNights(e.target.value)}/>
                 <p>Activities</p>
                 <input type="text" className="input form-control" value={activities} onChange={e => setActivities(e.target.value)}/>
