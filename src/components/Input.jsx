@@ -63,7 +63,7 @@ const Input = () => {
               name="location"
               onChange={handleChange}
             />
-            <p>Date</p>
+            <p>Date(s)</p>
             <input
               type="text"
               className="input form-control"

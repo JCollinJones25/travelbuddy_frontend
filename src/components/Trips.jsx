@@ -39,8 +39,8 @@ const Trips = () => {
           <tr>
             <th>Where?</th>
             <th>Date(s)</th>
-            <th>Hotel</th>
-            <th>Flights</th>
+            <th>Hotel(s)</th>
+            <th>Flight(s)</th>
             <th>Days</th>
             <th>Nights</th>
             <th>Plans</th>
