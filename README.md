@@ -15,3 +15,8 @@ Built using the PERN stack, Travel Buddy is a full stack website to plan and org
 
 ## Component Hierarchy
 ![comp hierarchy](https://github.com/JCollinJones25/travelbuddy-frontend/blob/main/public/images/comps.png)
+
+## Screenshots 
+![trips](https://github.com/JCollinJones25/travelbuddy_frontend/blob/main/public/images/trips.png)
+![input](https://github.com/JCollinJones25/travelbuddy_frontend/blob/main/public/images/input.png)
+![edit](https://github.com/JCollinJones25/travelbuddy_frontend/blob/main/public/images/edit.png)
