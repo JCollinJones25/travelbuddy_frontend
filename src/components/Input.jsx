@@ -13,8 +13,6 @@ const Input = (props) => {
     reservations: "",
   });
 
-  // const URL = "http://localhost:4000/new";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

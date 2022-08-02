@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
 const Trips = (props) => {
+  
   const [trips, setTrips] = useState([]);
-
-  // const URL = "http://localhost:4000/";
 
   const getTrips = async () => {
     try {
