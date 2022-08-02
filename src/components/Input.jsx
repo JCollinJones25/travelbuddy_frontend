@@ -26,7 +26,7 @@ const Input = (props) => {
         activities: trip.activities,
         reservations: trip.reservations,
       };
-      const response = await fetch(`${props.URL}/new`, {
+      const response = await fetch(`${props.URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
