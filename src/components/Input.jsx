@@ -26,12 +26,9 @@ const Input = (props) => {
         activities: trip.activities,
         reservations: trip.reservations,
       };
-      const response = await fetch(`${props.URL}`, {
+      const response = await fetch(`${props.URL}/trips`, {
         method: "POST",
-        headers: { 
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        },
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body),
       });
       console.log(response);

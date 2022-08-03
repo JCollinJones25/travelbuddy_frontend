@@ -7,12 +7,9 @@ const Trips = (props) => {
 
   const getTrips = async () => {
     try {
-      const response = await fetch(props.URL, {
+      const response = await fetch(`${props.URL}/trips`, {
         method: "GET",
-        headers: { 
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        },
+        headers: {"Content-Type": "application/json"},
       })
       const result = await response.json();
       setTrips(result);
@@ -27,7 +24,7 @@ const Trips = (props) => {
 
   const deleteTrip = async (id) => {
     try {
-      const deleteTrip = await fetch(`${props.URL}/${id}`, {
+      const deleteTrip = await fetch(`${props.URL}/trips/${id}`, {
         method: "DELETE",
       });
       setTrips(trips.filter((trip) => trip.id !== id));
