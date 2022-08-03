@@ -28,7 +28,10 @@ const Input = (props) => {
       };
       const response = await fetch(`${props.URL}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        },
         body: JSON.stringify(body),
       });
       console.log(response);

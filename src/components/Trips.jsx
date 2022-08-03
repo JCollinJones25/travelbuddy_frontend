@@ -2,12 +2,18 @@ import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
 const Trips = (props) => {
-  
+
   const [trips, setTrips] = useState([]);
 
   const getTrips = async () => {
     try {
-      const response = await fetch(props.URL);
+      const response = await fetch(props.URL, {
+        method: "GET",
+        headers: { 
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        },
+      })
       const result = await response.json();
       setTrips(result);
     } catch (err) {
