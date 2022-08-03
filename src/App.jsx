@@ -5,7 +5,7 @@ import Trips from './components/Trips';
 
 const App = () => {
 
-  const URL = "https://travelbuddy-planner.herokuapp.com/";
+  const URL = "https://travelbuddy-planner.herokuapp.com";
 
   return (
     <div className="App">

@@ -16,7 +16,7 @@ const Edit = ({ trip, URL }) => {
         e.preventDefault()
         try {
             const body = { location, date, hotel, flights, days, nights, activities, reservations }
-             const response = await fetch(`${URL}/${trip.id}`, {
+             const response = await fetch(`${URL}/trips/${trip.id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
