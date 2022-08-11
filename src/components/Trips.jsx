@@ -61,7 +61,7 @@ const Trips = (props) => {
                 <td>{trip.reservations}</td>
                 <div className="edit-delete-buttons">
                   <td>
-                    <Edit trip={trip} URL={props.URL} />
+                    <Edit trip={trip} URL={props.URL}></Edit>
                   </td>
                   <td>
                     <button

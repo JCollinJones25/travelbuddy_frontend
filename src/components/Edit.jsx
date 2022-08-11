@@ -27,15 +27,11 @@ const Edit = ({ trip, URL }) => {
         }
     }
 
-  return (
-    <div className="edit">
-      <button
-        type="button"
-        className="btn btn-primary"
-        data-toggle="modal"
-        data-target={`#${trip.id}`}>Edit</button>
-      <div className="modal" id={`${trip.id}`}
-      onClick={() => {
+    const resetModal = (e) => {
+      if(e.target != document.getElementsByClassName('close') || e.target != document.getElementsByClassName('btn-danger') || e.target == document.getElementsByClassName('modal-content')) {
+        console.log('You clicked inside the modal');
+      } else {
+        console.log('You are leaving the modal');
         setLocation(trip.location)
         setDate(trip.date)
         setHotel(trip.hotel)
@@ -44,22 +40,22 @@ const Edit = ({ trip, URL }) => {
         setNights(trip.nights)
         setActivities(trip.activities)
         setReservations(trip.reservations)
-      }}>
+      }
+    } 
+
+  return (
+    <div className="edit">
+      <button
+        type="button"
+        className="btn btn-primary"
+        data-toggle="modal"
+        data-target={`#${trip.id}`}>Edit</button>
+      <div className="modal" id={`${trip.id}`}>
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className="modal-content" onClick={ resetModal }>
             <div className="modal-header">
               <h4 className="modal-title">Edit Trip</h4>
-              <button type="button" className="close" data-dismiss="modal"
-              onClick={() => {
-                setLocation(trip.location)
-                setDate(trip.date)
-                setHotel(trip.hotel)
-                setFlights(trip.flights)
-                setDays(trip.days)
-                setNights(trip.nights)
-                setActivities(trip.activities)
-                setReservations(trip.reservations)
-              }}>
+              <button type="button" className="close" data-dismiss="modal" onClick={ resetModal }>
                 &times;
               </button>
             </div>
@@ -85,17 +81,7 @@ const Edit = ({ trip, URL }) => {
               <button type="button" className="btn btn-success" data-dismiss="modal" onClick={ updateTrip }>
                 Edit
               </button>
-              <button type="button" className="btn btn-danger" data-dismiss="modal" 
-              onClick={() => {
-                setLocation(trip.location)
-                setDate(trip.date)
-                setHotel(trip.hotel)
-                setFlights(trip.flights)
-                setDays(trip.days)
-                setNights(trip.nights)
-                setActivities(trip.activities)
-                setReservations(trip.reservations)
-              }}>
+              <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={ resetModal }>
                 Close
               </button>
             </div>
