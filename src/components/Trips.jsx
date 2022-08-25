@@ -2,15 +2,14 @@ import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
 const Trips = (props) => {
-
   const [trips, setTrips] = useState([]);
 
   const getTrips = async () => {
     try {
       const response = await fetch(`${props.URL}/trips`, {
         method: "GET",
-        headers: {"Content-Type": "application/json"},
-      })
+        headers: { "Content-Type": "application/json" },
+      });
       const result = await response.json();
       setTrips(result);
     } catch (err) {
@@ -34,11 +33,10 @@ const Trips = (props) => {
   };
 
   const loaded = () => {
-
     return (
       <div className="trips">
-      <h5>Upcoming Trips</h5>
-      <hr></hr>{" "}
+        <h5>Upcoming Trips</h5>
+        <hr></hr>{" "}
         <table className="table">
           <tr>
             <th>Where?</th>
@@ -69,7 +67,7 @@ const Trips = (props) => {
                     <button
                       className="btn btn-danger"
                       onClick={() => deleteTrip(trip.id)}
-                      >
+                    >
                       Delete
                     </button>
                   </td>
@@ -79,20 +77,22 @@ const Trips = (props) => {
           </tbody>
         </table>
       </div>
-  );
-}
+    );
+  };
 
-return trips ? loaded() : 
-      <div className="trips">
+  return trips ? (
+    loaded()
+  ) : (
+    <div className="trips">
       <h5>Upcoming Trips</h5>
       <hr></hr>{" "}
-        <table className="table">
-            <div className="loading">
-              <div className="spinner"></div>
-            </div>
-        </table>
-      </div>
-
+      <table className="table">
+        <div className="loading">
+          <div className="spinner"></div>
+        </div>
+      </table>
+    </div>
+  );
 };
 
 export default Trips;
