@@ -41,6 +41,37 @@ html, body {
   margin: auto;
 }
 
+.loading {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin: 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 2px solid;
+  border-color: var(--orange) transparent var(--orange) transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+  display: flex;
+  align-self: center;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 tr:nth-child(even) {
   background-color: #dcebfd;
 }

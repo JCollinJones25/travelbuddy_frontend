@@ -33,8 +33,10 @@ const Trips = (props) => {
     }
   };
 
-  return (
-    <div className="trips">
+  const loaded = () => {
+
+    return (
+      <div className="trips">
       <h5>Upcoming Trips</h5>
       <hr></hr>{" "}
         <table className="table">
@@ -50,7 +52,7 @@ const Trips = (props) => {
           </tr>
           <tbody>
             {trips.map((trip) => (
-                <tr key={trip.id}>
+              <tr key={trip.id}>
                 <td>{trip.location}</td>
                 <td>{trip.date}</td>
                 <td>{trip.hotel}</td>
@@ -78,6 +80,19 @@ const Trips = (props) => {
         </table>
       </div>
   );
+}
+
+return trips ? loaded() : 
+      <div className="trips">
+      <h5>Upcoming Trips</h5>
+      <hr></hr>{" "}
+        <table className="table">
+            <div className="loading">
+              <div className="spinner"></div>
+            </div>
+        </table>
+      </div>
+
 };
 
 export default Trips;
