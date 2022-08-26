@@ -45,22 +45,19 @@ html, body {
   width: 80%;
   height: auto;
   margin: auto;
-  margin: 105px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  padding: 150px;
 }
 
 .spinner {
-  width: 64px;
-  height: 64px;
-  border: 2px solid;
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
   border-color: var(--orange) transparent var(--orange) transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
-  display: flex;
-  align-self: center;
+  /* display: flex;
+  align-self: center; */
+  margin: auto;
 }
 
 @keyframes spin-anim {
