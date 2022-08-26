@@ -80,19 +80,22 @@ const Trips = (props) => {
     );
   };
 
-  return trips ? (
-    loaded()
-  ) : (
-    <div className="trips">
-      <h5>Upcoming Trips</h5>
-      <hr></hr>{" "}
-      <table className="table">
-        <div className="loading">
-          <div className="spinner"></div>
-        </div>
-      </table>
-    </div>
-  );
+  const loading = () => {
+    return (
+      <div className="trips">
+        <h5>Upcoming Trips</h5>
+        <hr></hr>{" "}
+        <table className="table">
+          <div className="loading">
+            <div className="spinner"></div>
+          </div>
+        </table>
+      </div>
+    );
+  };
+
+  return trips ? loaded() : loading();
+
 };
 
 export default Trips;
