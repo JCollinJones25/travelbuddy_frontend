@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
 const Trips = (props) => {
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState({
+    data: [],
+    isLoading: true
+  });
 
   const getTrips = async () => {
     try {
@@ -11,7 +14,10 @@ const Trips = (props) => {
         headers: { "Content-Type": "application/json" },
       });
       const result = await response.json();
-      setTrips(result);
+      setTrips({
+        data: result, 
+        isLoading: false
+      });
     } catch (err) {
       console.error(err.message);
     }
@@ -26,7 +32,11 @@ const Trips = (props) => {
       const deleteTrip = await fetch(`${props.URL}/trips/${id}`, {
         method: "DELETE",
       });
-      setTrips(trips.filter((trip) => trip.id !== id));
+      setTrips({
+        data: trips.data.filter((trip) => trip.id !== id), 
+        isLoading: false
+      });
+      console.log(trips)
     } catch (err) {
       console.error(err.message);
     }
@@ -49,7 +59,7 @@ const Trips = (props) => {
             <th>Reservations</th>
           </tr>
           <tbody>
-            {trips.map((trip) => (
+            {trips.data.map((trip) => (
               <tr key={trip.id}>
                 <td>{trip.location}</td>
                 <td>{trip.date}</td>
@@ -80,19 +90,23 @@ const Trips = (props) => {
     );
   };
 
-  return trips ? (
-    loaded()
-  ) : (
-    <div className="trips">
-      <h5>Upcoming Trips</h5>
-      <hr></hr>{" "}
-      <table className="table">
-        <div className="loading">
-          <div className="spinner"></div>
-        </div>
-      </table>
-    </div>
-  );
+  const loading = () => {
+    return (
+      <div className="trips">
+        <h5>Upcoming Trips</h5>
+        <hr></hr>{" "}
+        <table className="table">
+          <div className="loading">
+            <div className="spinner"></div>
+          </div>
+        </table>
+      </div>
+    );
+  };
+
+  return trips.isLoading ? loading() : loaded();
+
+
 };
 
 export default Trips;
