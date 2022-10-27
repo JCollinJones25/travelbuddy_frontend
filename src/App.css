@@ -55,8 +55,6 @@ html, body {
   border-color: var(--orange) transparent var(--orange) transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
-  /* display: flex;
-  align-self: center; */
   margin: auto;
 }
 
